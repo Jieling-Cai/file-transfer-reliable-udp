@@ -1,8 +1,3 @@
-/* 
- * udpserver.c - A simple UDP echo server 
- * usage: udpserver <port>
- */
-
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -210,9 +205,6 @@ int main(int argc, char **argv) {
       hostaddrp = inet_ntoa(clientaddr.sin_addr);
       if (hostaddrp == NULL)
         error("ERROR on inet_ntoa\n");
-
-      // printf("server received datagram from %s (%s)\n", 
-      // hostp->h_name, hostaddrp);
       
       printf("\n**********************************************************************\n");
       printf("server received %d bytes read request message from client\n", n);
